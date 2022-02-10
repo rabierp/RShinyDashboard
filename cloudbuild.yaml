@@ -1,0 +1,13 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - 'run'
+  - 'deploy'
+  - 'rshiny-dashboard-service'
+  - '--image'
+  - 'europe-west1-docker.pkg.dev/fr-ps-gis-expe/rshiny-docker-repo/quickstart-image:tag1'
+  - '--region'
+  - 'us-central1'
+  - '--platform'
+  - 'managed'
+  - '--allow-unauthenticated'
